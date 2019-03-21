@@ -1,0 +1,24 @@
+<div>
+  <fieldset><legend>Switch case</legend>
+<div *ngIf="_ui == 'Angular' then angular else react">
+  
+</div>
+<ng-template #angular>
+  Angular
+</ng-template>
+<ng-template #react>
+  React Js
+</ng-template>
+  
+<ng-template *ngIf="_index > 5 then greaterFive">
+</ng-template>
+<ng-template #greaterFive>
+    <div>Index is greater than 5 </div>
+</ng-template>
+
+
+<select (change)="getName($event)">
+  <option *ngFor="let name of names">{{name}}</option>
+</select>
+</fieldset>
+</div>
